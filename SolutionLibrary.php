@@ -53,6 +53,7 @@ class SolutionLibrary
 
     public function __toString()
     {
+        //TODO: Implementar 
         return ' ';
     }
 

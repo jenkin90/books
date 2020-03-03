@@ -4,7 +4,17 @@ require_once('AlgoritmoAbstracto.php');
 class AlgoritmoTalCual extends AlgoritmoAbstracto
 {
 
-    public function solve()
+    public function solve():void
+    {
+        $this->prepareProblem();
+        $this->generateSolution();
+    }
+
+    public function prepareProblem():void{
+
+    }
+
+    public function generateSolution(): void
     {
         $libraries = array();
         foreach ($this->getProblem()->getLibraries() as $library) {

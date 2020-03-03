@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 require('Problem.php');
 require('AlgoritmoTalCual.php');
+require('AlgoritmoOrdenado.php');
 $testCase = filter_var($_GET['problem'], FILTER_SANITIZE_STRING);
 $filenames = [
     'a' => 'a_example.txt',
@@ -13,10 +14,9 @@ $filenames = [
 ];
 $filename = $filenames[$testCase];
 $problem = new Problem($filename);
-//echo $problem;
-$algoritmo = new AlgoritmoTalCual($problem,$filename. '.out');
+$algoritmo = new AlgoritmoOrdenado($problem,$filename. '.out');
 $algoritmo->solve();
-echo $algoritmo->getSolution();
+$algoritmo->getSolution();
 
 $end = microtime(true);
 $time = $end - $_SERVER['REQUEST_TIME_FLOAT'];;

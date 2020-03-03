@@ -10,5 +10,5 @@ interface Algoritmo
 
     public function __construct(Problem $problem,String $outputFile);
 
-    public function solve();
+    public function solve():void;
 }
